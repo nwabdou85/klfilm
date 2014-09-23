@@ -1,0 +1,16 @@
+<template name="linkItem">
+<div class="link">
+<a href="#" class="upvote btn {{upvotedClass}}"> ♥ </a>
+<div class="link-content">
+<h3><p>{{title}}</p><span>{{domain}}</span><p id="in2">Bande annonce: <a href="{{ur}}"  target="_Blank"> {{domainn}}</a></P> </h3>
+<p id="in1">
+{{pluralize votes "Vote"}},
+{{author}},
+<a href="{{pathFor 'linkPage'}}">{{pluralize commentsCount "comment"}}</a>
+{{#if ownLink}}<a href="{{pathFor 'linkEdit'}}">Modifier</a>{{/if}}
+</p>
+<p id="time"> {{submittedText}}</p>
+</div>
+<a href="{{pathFor 'linkPage'}}" class="discuss btn">Discuter</a>
+</div>
+</template>

@@ -1,0 +1,40 @@
+<template name="linkPage">
+<div class="link">
+<a href="#" class="upvote btn {{upvotedClass}}"> ♥ </a>
+<div class="link-content">
+<h3><p>{{title}}</p><span>{{domain}}</span><p id="in2">Bande annonce: <a href="{{ur}}"  target="_Blank"> {{domainn}}</a></P> </h3>
+<p id="in1">
+{{pluralize votes "Vote"}},
+{{author}},
+<a href="{{pathFor 'linkPage'}}">{{pluralize commentsCount "comment"}}</a>
+{{#if ownLink}}<a href="{{pathFor 'linkEdit'}}">Modifier</a>{{/if}}
+</p>
+<p id="time"> {{submittedText}}</p>
+{{> tweet}}
+{{> facebook}}
+</div>
+<a href="{{pathFor 'home'}}" class="discuss btn">Home </a>
+<!-- <iframe src= {{ur}} id="ifram">
+</iframe> -->
+
+<video  controls>
+  <source src= {{ur}} type="video/mp4">
+  <source src= {{ur}} type="video/ogg">
+</video>
+</div>
+
+
+
+<ul class="comments">
+{{#each comments}}
+{{> comment}}
+{{/each}}
+</ul>
+
+{{#if currentUser}}
+{{> commentSubmit}}
+{{else}}
+<p>Vous devez vous connecter pour laisser un commentaire.</p>
+{{/if}}
+
+</template>

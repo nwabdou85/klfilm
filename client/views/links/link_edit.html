@@ -1,0 +1,33 @@
+<template name="linkEdit">
+<form class="main">
+<div class="control-group">
+<label class="control-label" for="url">Genre</label>
+<div class="controls">
+<input name="url" type="text" value="{{url}}" placeholder="Ex: Drame"/>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="title">Titre</label>
+<div class="controls">
+<input name="title" type="text" value="{{title}}" placeholder="Ex: Ce que le jour doit à la nuit"/>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="ur">URL</label>
+<div class="controls">
+<input name="ur" type="text" value="{{ur}}" placeholder="URL de bande annonce" />
+</div>
+</div>
+<div class="control-group">
+<div class="controls">
+<input type="submit" value="Proposer" class="btn btn-primary submit"/>
+</div>
+</div>
+<hr/>
+<div class="control-group">
+<div class="controls">
+<a class="btn btn-danger delete" href="#">Supprimer cette proposition</a>
+</div>
+</div>
+</form>
+</template>

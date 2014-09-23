@@ -1,0 +1,12 @@
+<template name="linksList">
+<div class="links">
+{{#each linksWithRank}}
+{{> linkItem}}
+{{/each}}
+
+{{#if hasMoreLinks}}
+<a class="load-more" href="{{nextPath}}">Voir plus de propositions</a>
+{{/if}}
+
+</div>
+</template>
